@@ -350,7 +350,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.apply_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.apply_blocklist))
 
 
-
 # Run Window
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
