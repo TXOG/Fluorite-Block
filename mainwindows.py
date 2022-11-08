@@ -4,12 +4,32 @@ from datetime import *
 # import subprocess
 import requests
 import ctypes, os
-# import sys
+import sys
 # import syslog
 import time
 #for tables
 from rich.console import Console
 from rich.table import Table
+
+# GUI imports
+from ui_mainwindow import *
+from PySide6.QtGui import *
+from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPushButton,
+    QSizePolicy, QStatusBar, QWidget, QMessageBox, QComboBox)
+
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    _fromUtf8 = lambda s: s
 
 
 #some variables
@@ -320,4 +340,23 @@ What would you like to do?""")
         menu()
 
 
-menu()
+
+# Window Class
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+    def __init__(self, parent=None , *args, obj=None, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs, parent=parent)
+        self.setupUi(self)
+
+        self.apply_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.apply_blocklist))
+
+
+
+# Run Window
+app = QtWidgets.QApplication(sys.argv)
+window = MainWindow()
+window.setWindowTitle('Sysblock')
+my_pixmap = QPixmap("sysblockguiicon")
+my_icon = QIcon(my_pixmap)
+window.setWindowIcon(my_icon)
+window.show()
+app.exec()

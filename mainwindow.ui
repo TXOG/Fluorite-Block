@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-21</y>
+      <width>801</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="menu">
+     <widget class="QLabel" name="tilte_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>801</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Verdana</family>
+        <pointsize>24</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Sysblock GUI</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="unto_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>480</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>UNDO</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Redirect_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>320</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Redirect</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="apply_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>80</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Apply</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="whitelist_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>160</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Whitelist</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="blacklist_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Blacklist</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cleanup_btn">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>400</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Cleanup</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="apply_blocklist"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
