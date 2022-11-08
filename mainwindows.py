@@ -14,18 +14,19 @@ from rich.table import Table
 
 #some variables
 # - Ignore this, its used for testing the program without admin perms every time
-# host_path = r"C:\Users\Computer\Documents\test.txt"
+base_path = os.getcwd()
+host_path = base_path + r"\etc\hosts.txt"
 
-try:
-    is_admin = os.getuid() == 0
-except AttributeError:
-    print("Please run this program as administrator")
-    is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
-    input("")
-    exit()
-
-
-host_path = r"C:\Windows\System32\drivers\etc\hosts"
+# try:
+#     is_admin = os.getuid() == 0
+# except AttributeError:
+#     print("Please run this program as administrator")
+#     is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
+#     input("")
+#     exit()
+#
+#
+# host_path = r"C:\Windows\System32\drivers\etc\hosts"
 
 def undo():
     with open(host_path, 'w') as undo:
