@@ -3,7 +3,7 @@ from colorama import Fore
 from datetime import *
 # import subprocess
 import requests
-# import os
+import ctypes, os
 # import sys
 # import syslog
 import time
@@ -15,6 +15,15 @@ from rich.table import Table
 #some variables
 # - Ignore this, its used for testing the program without admin perms every time
 # host_path = r"C:\Users\Computer\Documents\test.txt"
+
+try:
+    is_admin = os.getuid() == 0
+except AttributeError:
+    print("Please run this program as administrator")
+    is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
+    input("")
+    exit()
+
 
 host_path = r"C:\Windows\System32\drivers\etc\hosts"
 
