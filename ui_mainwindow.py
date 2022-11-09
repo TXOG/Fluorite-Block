@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwindowdWnJMF.ui'
+## Form generated from reading UI file 'mainwindowHLBDru.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -43,10 +43,10 @@ class Ui_MainWindow(object):
         self.tilte_label.setTextFormat(Qt.AutoText)
         self.tilte_label.setScaledContents(False)
         self.tilte_label.setAlignment(Qt.AlignCenter)
-        self.unto_btn = QPushButton(self.menu)
-        self.unto_btn.setObjectName(u"unto_btn")
-        self.unto_btn.setGeometry(QRect(270, 480, 261, 71))
-        self.unto_btn.setStyleSheet(u"QWidget{\n"
+        self.undo_btn = QPushButton(self.menu)
+        self.undo_btn.setObjectName(u"undo_btn")
+        self.undo_btn.setGeometry(QRect(270, 480, 261, 71))
+        self.undo_btn.setStyleSheet(u"QWidget{\n"
 "    background-color: white;\n"
 "}\n"
 "\n"
@@ -71,10 +71,10 @@ class Ui_MainWindow(object):
 "    background-color: rgb(204, 204, 204);\n"
 "    color: rgb(122, 122, 122);\n"
 "}")
-        self.Redirect_btn = QPushButton(self.menu)
-        self.Redirect_btn.setObjectName(u"Redirect_btn")
-        self.Redirect_btn.setGeometry(QRect(270, 320, 261, 71))
-        self.Redirect_btn.setStyleSheet(u"QWidget{\n"
+        self.redirect_btn = QPushButton(self.menu)
+        self.redirect_btn.setObjectName(u"redirect_btn")
+        self.redirect_btn.setGeometry(QRect(270, 320, 261, 71))
+        self.redirect_btn.setStyleSheet(u"QWidget{\n"
 "    background-color: white;\n"
 "}\n"
 "\n"
@@ -212,9 +212,24 @@ class Ui_MainWindow(object):
 "    color: rgb(122, 122, 122);\n"
 "}")
         self.stackedWidget.addWidget(self.menu)
+        self.custom_redirects = QWidget()
+        self.custom_redirects.setObjectName(u"custom_redirects")
+        self.stackedWidget.addWidget(self.custom_redirects)
         self.apply_blocklist = QWidget()
         self.apply_blocklist.setObjectName(u"apply_blocklist")
         self.stackedWidget.addWidget(self.apply_blocklist)
+        self.cleanup_blocklists = QWidget()
+        self.cleanup_blocklists.setObjectName(u"cleanup_blocklists")
+        self.stackedWidget.addWidget(self.cleanup_blocklists)
+        self.undo_all_changes = QWidget()
+        self.undo_all_changes.setObjectName(u"undo_all_changes")
+        self.stackedWidget.addWidget(self.undo_all_changes)
+        self.blacklisting = QWidget()
+        self.blacklisting.setObjectName(u"blacklisting")
+        self.stackedWidget.addWidget(self.blacklisting)
+        self.whitelisting = QWidget()
+        self.whitelisting.setObjectName(u"whitelisting")
+        self.stackedWidget.addWidget(self.whitelisting)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -232,8 +247,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.tilte_label.setText(QCoreApplication.translate("MainWindow", u"Sysblock GUI", None))
-        self.unto_btn.setText(QCoreApplication.translate("MainWindow", u"UNDO", None))
-        self.Redirect_btn.setText(QCoreApplication.translate("MainWindow", u"Redirect", None))
+        self.undo_btn.setText(QCoreApplication.translate("MainWindow", u"UNDO", None))
+        self.redirect_btn.setText(QCoreApplication.translate("MainWindow", u"Redirect", None))
         self.apply_btn.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
         self.whitelist_btn.setText(QCoreApplication.translate("MainWindow", u"Whitelist", None))
         self.blacklist_btn.setText(QCoreApplication.translate("MainWindow", u"Blacklist", None))

@@ -72,7 +72,6 @@ def undo():
 # localhost name resolution is handled within DNS itself.
 #	127.0.0.1       localhost
 #	::1             localhost""")
-        print("finished, you may now close this program")
 
 def custom_redirects():
     domain = input("Enter the domain you want to be redirected")
@@ -347,7 +346,30 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs, parent=parent)
         self.setupUi(self)
 
+        # Main Menu buttons
         self.apply_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.apply_blocklist))
+        self.whitelist_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.whitelisting))
+        self.blacklist_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.blacklisting))
+        self.redirect_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.custom_redirects))
+        self.cleanup_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.cleanup_blocklists))
+        self.undo_btn.clicked.connect(lambda: undo_changes_dialog())
+
+        def undo_changes_dialog():
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Warning)
+            msg.setText("UNDO ALL CHANGES")
+            msg.setInformativeText("Are you sure you want to undo all changes?")
+            msg.setWindowTitle("UNDO ALL CHANGES")
+            msg.setDetailedText("Sets hosts back to normal")
+            msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+            msg.buttonClicked.connect(msgbtn)
+            msg.exec()
+
+        def msgbtn(i):
+            if i.text() == ("OK"):
+                undo()
+
+
 
 
 # Run Window

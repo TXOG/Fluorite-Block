@@ -56,7 +56,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="unto_btn">
+     <widget class="QPushButton" name="undo_btn">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -96,7 +96,7 @@ QPushButton:disabled {
        <string>UNDO</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="Redirect_btn">
+     <widget class="QPushButton" name="redirect_btn">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -297,7 +297,12 @@ QPushButton:disabled {
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="custom_redirects"/>
     <widget class="QWidget" name="apply_blocklist"/>
+    <widget class="QWidget" name="cleanup_blocklists"/>
+    <widget class="QWidget" name="undo_all_changes"/>
+    <widget class="QWidget" name="blacklisting"/>
+    <widget class="QWidget" name="whitelisting"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
