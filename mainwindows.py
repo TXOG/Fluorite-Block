@@ -183,76 +183,76 @@ def cleanup():
         f.truncate()
 
 
-def apply_blocklist():
-    print(" Applying...")
+# def apply_blocklist():
+#     print(" Applying...")
+#
+#     def lines(t):
+#         lines = open(t).read().splitlines()
+#         return(lines)
+#
+#     #PROCESSING THE USER SELECTED BLOCKLIST
+#     row = lines("blocklist.txt")
+#     websites = row
+#
+#     print(Fore.WHITE, "Please wait for a minute or two", Fore.RED,
+#           "Unfortunately, i haven't found a solution (yet) for having the script detect when the program has finished, so give it a moment before closing.")
+#     while True:
+#         with open(host_path, "r+") as f:
+#             content = f.read()
+#             for website in websites:
+#                 if website in content:
+#                     pass
+#                 elif(not website):
+#                     print("finished")
+#                 else:
+#                     f.write(website+"\n")
+#                     #f.write(redirect+"    	"+website+"\n")
+#     else:
+#         with open(host_path, 'r+') as file:
+#             content = file.readlines()
+#             file.seek(0)
+#             for line in content:
+#                 if not any(website in line for website in websites):
+#                     file.write(line)
+#             file.truncate()
+#
+#     time.sleep(5)
+#     print(Fore.YELLOW, """Sysblock has been applied succesfully,
+#              try visiting a website usually filled with ads and test if it worked
+#
+#              !!! IMPORTANT: if you wish to whitelist a site, re-run this script but with option 3""")
+#     cleanup()
 
-    def lines(t):
-        lines = open(t).read().splitlines()
-        return(lines)
 
-    #PROCESSING THE USER SELECTED BLOCKLIST
-    row = lines("blocklist.txt")
-    websites = row
-
-    print(Fore.WHITE, "Please wait for a minute or two", Fore.RED,
-          "Unfortunately, i haven't found a solution (yet) for having the script detect when the program has finished, so give it a moment before closing.")
-    while True:
-        with open(host_path, "r+") as f:
-            content = f.read()
-            for website in websites:
-                if website in content:
-                    pass
-                elif(not website):
-                    print("finished")
-                else:
-                    f.write(website+"\n")
-                    #f.write(redirect+"    	"+website+"\n")
-    else:
-        with open(host_path, 'r+') as file:
-            content = file.readlines()
-            file.seek(0)
-            for line in content:
-                if not any(website in line for website in websites):
-                    file.write(line)
-            file.truncate()
-
-    time.sleep(5)
-    print(Fore.YELLOW, """Sysblock has been applied succesfully,
-             try visiting a website usually filled with ads and test if it worked
-
-             !!! IMPORTANT: if you wish to whitelist a site, re-run this script but with option 3""")
-    cleanup()
-
-
-#DOWNLOADING THE USER SELECTED blocklist
-def downloading():
-    global url
-
-    def download_blocklist():
-        myfile = requests.get(url)
-        open(("blocklist.txt"), 'ab').write(myfile.content)
-        print(" Downloaded blocklists...")
-        apply_blocklist()
-
-    blocklist_choice_final = blocklist_choice.split(',')
-    print(blocklist_choice_final)
-    if "1" in blocklist_choice_final:
-        url = 'https://dbl.oisd.nl/'
-        download_blocklist()
-    if "2" in blocklist_choice_final:
-        url = 'https://dbl.oisd.nl/basic/'
-        download_blocklist()
-    if "3" in blocklist_choice_final:
-        print("Please enter a blocklist url,", Fore.RED, "note that this must be a DOMAIN/Hosts blocklist.",
-              Fore.LIGHTMAGENTA_EX, "You can find some at filterlists.com")
-        url = input("--->   ")
-        download_blocklist()
-    if "4" in blocklist_choice_final:
-        url = 'https://raw.githubusercontent.com/furkun/ProtectorHosts/main/hosts'
-        download_blocklist()
-    if "5" in blocklist_choice_final:
-        url = 'https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt'
-        download_blocklist()
+# #DOWNLOADING THE USER SELECTED blocklist
+# def downloading():
+#     global url
+#
+#     def download_blocklist():
+#         myfile = requests.get(url)
+#         open(("blocklist.txt"), 'ab').write(myfile.content)
+#         print(" Downloaded blocklists...")
+#         apply_blocklist()
+#
+#     blocklist_choice_final = blocklist_choice.split(',')
+#     print(blocklist_choice_final)
+#     if "1" in blocklist_choice_final:
+#         url = 'https://dbl.oisd.nl/'
+#         download_blocklist()
+#     if "2" in blocklist_choice_final:
+#         url = 'https://dbl.oisd.nl/basic/'
+#         download_blocklist()
+#     if "3" in blocklist_choice_final:
+#         print("Please enter a blocklist url,", Fore.RED, "note that this must be a DOMAIN/Hosts blocklist.",
+#               Fore.LIGHTMAGENTA_EX, "You can find some at filterlists.com")
+#         url = input("--->   ")
+#         download_blocklist()
+#     if "4" in blocklist_choice_final:
+#         url = 'https://raw.githubusercontent.com/furkun/ProtectorHosts/main/hosts'
+#         download_blocklist()
+#     if "5" in blocklist_choice_final:
+#         url = 'https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt'
+#         download_blocklist()
     # if "6" in blocklist_choice_final:
     #
     # if "7" in blocklist_choice_final:
@@ -358,6 +358,64 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         super(MainWindow, self).__init__(*args, **kwargs, parent=parent)
         self.setupUi(self)
 
+        def apply_blocklist():
+            print(" Applying...")
+
+            def lines(t):
+                lines = open(t).read().splitlines()
+                return (lines)
+
+            # PROCESSING THE USER SELECTED BLOCKLIST
+            row = lines("blocklist.txt")
+            websites = row
+
+            while True:
+                with open(host_path, "r+") as f:
+                    content = f.read()
+                    for website in websites:
+                        if website in content:
+                            pass
+                        elif (not website):
+                            print("finished")
+                        else:
+                            f.write(website + "\n")
+                            # f.write(redirect+"    	"+website+"\n")
+            else:
+                with open(host_path, 'r+') as file:
+                    content = file.readlines()
+                    file.seek(0)
+                    for line in content:
+                        if not any(website in line for website in websites):
+                            file.write(line)
+                    file.truncate()
+
+            print("done")
+            cleanup()
+
+
+        def not_admin():
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("Administrator")
+            msg.setInformativeText("This program requires admin to run, please restart")
+            msg.setWindowTitle("Sysblock")
+            msg.setStandardButtons(QMessageBox.Ok)
+            msg.buttonClicked.connect(admin_restart)
+            msg.exec()
+
+        def admin_restart():
+            exit()
+
+        # try:
+        #     is_admin = os.getuid() == 0
+        # except AttributeError:
+        #     not_admin()
+        #     print("Please run this program as administrator")
+        #     is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
+        #     input("")
+        #     exit()
+
+
         # Main Menu buttons
         self.apply_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.apply_blocklist))
         self.whitelist_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.whitelisting))
@@ -366,17 +424,67 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.cleanup_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.cleanup_blocklists))
         self.undo_btn.clicked.connect(lambda: undo_changes_dialog())
 
-        self.oisd_full = QCheckBox("Button1")
-        self.oisd_full_layout.addWidget(self.oisd_full, Qt.AlignCenter, Qt.AlignCenter)
+        # Apply Blocklist page
+        self.oisd_full = QCheckBox("OISD full")
+        self.oisd_full_layout.addWidget(self.oisd_full, Qt.AlignLeft, Qt.AlignLeft)
 
-        self.oisd_lightweight = QCheckBox("Button1")
-        self.oisd_lightweight_layout.addWidget(self.oisd_lightweight, Qt.AlignCenter, Qt.AlignCenter)
+        self.oisd_lightweight = QCheckBox("OISD lightweight")
+        self.oisd_lightweight_layout.addWidget(self.oisd_lightweight, Qt.AlignLeft, Qt.AlignLeft)
 
-        self.ipgrabber_blocklist = QCheckBox("Button1")
-        self.ipgrabber_blocklist_layout.addWidget(self.ipgrabber_blocklist, Qt.AlignCenter, Qt.AlignCenter)
+        self.ipgrabber_blocklist = QCheckBox("IpGrabber blocklist")
+        self.ipgrabber_blocklist_layout.addWidget(self.ipgrabber_blocklist, Qt.AlignLeft, Qt.AlignLeft)
 
-        self.no_facebook = QCheckBox("Button1")
-        self.no_facebook_layout.addWidget(self.no_facebook, Qt.AlignCenter, Qt.AlignCenter)
+        self.no_facebook = QCheckBox("No Facebook")
+        self.no_facebook_layout.addWidget(self.no_facebook, Qt.AlignLeft, Qt.AlignLeft)
+
+        self.apply_blocklist_btn.clicked.connect(lambda: pre_apply_blocklist_download_gui())
+
+
+
+        def pre_apply_blocklist_download_gui():
+            global checked_check_1
+            global checked_check_2
+            global checked_check_3
+            global checked_check_4
+            checked_check_1 = 0
+            checked_check_2 = 0
+            checked_check_3 = 0
+            checked_check_4 = 0
+            with open('blocklist.txt', 'w+') as blocklist:
+                blocklist.truncate(0)
+                blocklist.seek(0)
+            apply_blocklist_download_gui()
+        def apply_blocklist_download_gui():
+            def download_blocklist():
+                myfile = requests.get(url)
+                open(("blocklist.txt"), 'ab').write(myfile.content)
+                print(" Downloaded blocklists...")
+
+            if self.oisd_full.isChecked():
+                if checked_check_1 == 1:
+                    pass
+                else:
+                    url = 'https://dbl.oisd.nl/'
+                    download_blocklist()
+            if self.oisd_lightweight.isChecked():
+                if checked_check_2 == 1:
+                    pass
+                else:
+                    url = 'https://dbl.oisd.nl/basic/'
+                    download_blocklist()
+            if self.ipgrabber_blocklist.isChecked():
+                if checked_check_3 == 1:
+                    pass
+                else:
+                    url = 'https://raw.githubusercontent.com/furkun/ProtectorHosts/main/hosts'
+                    download_blocklist()
+            if self.no_facebook.isChecked():
+                if checked_check_4 == 1:
+                    pass
+                else:
+                    url = 'https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt'
+                    download_blocklist()
+            apply_blocklist()
 
         def undo_changes_dialog():
             msg = QMessageBox()
@@ -388,9 +496,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             msg.buttonClicked.connect(msgbtn)
             msg.exec()
 
+
         def msgbtn(i):
             if i.text() == ("OK"):
                 undo()
+
 
 
 

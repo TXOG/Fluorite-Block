@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwindowacmzVH.ui'
+## Form generated from reading UI file 'mainwindowdnfxCA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(800, 585)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.stackedWidget = QStackedWidget(self.centralwidget)
@@ -219,7 +219,7 @@ class Ui_MainWindow(object):
         self.apply_blocklist.setObjectName(u"apply_blocklist")
         self.oisd_full_frame = QFrame(self.apply_blocklist)
         self.oisd_full_frame.setObjectName(u"oisd_full_frame")
-        self.oisd_full_frame.setGeometry(QRect(100, 360, 251, 91))
+        self.oisd_full_frame.setGeometry(QRect(20, 80, 251, 91))
         self.oisd_full_frame.setCursor(QCursor(Qt.PointingHandCursor))
         self.oisd_full_frame.setFrameShape(QFrame.NoFrame)
         self.oisd_full_frame.setFrameShadow(QFrame.Raised)
@@ -230,7 +230,7 @@ class Ui_MainWindow(object):
         self.oisd_full_layout.setContentsMargins(0, 0, 0, 0)
         self.oisd_lightweight_frame = QFrame(self.apply_blocklist)
         self.oisd_lightweight_frame.setObjectName(u"oisd_lightweight_frame")
-        self.oisd_lightweight_frame.setGeometry(QRect(100, 50, 251, 91))
+        self.oisd_lightweight_frame.setGeometry(QRect(20, 170, 251, 91))
         self.oisd_lightweight_frame.setCursor(QCursor(Qt.PointingHandCursor))
         self.oisd_lightweight_frame.setFrameShape(QFrame.NoFrame)
         self.oisd_lightweight_frame.setFrameShadow(QFrame.Raised)
@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
         self.oisd_lightweight_layout.setContentsMargins(0, 0, 0, 0)
         self.ipgrabber_blocklist_frame = QFrame(self.apply_blocklist)
         self.ipgrabber_blocklist_frame.setObjectName(u"ipgrabber_blocklist_frame")
-        self.ipgrabber_blocklist_frame.setGeometry(QRect(420, 200, 251, 91))
+        self.ipgrabber_blocklist_frame.setGeometry(QRect(20, 260, 251, 91))
         self.ipgrabber_blocklist_frame.setCursor(QCursor(Qt.PointingHandCursor))
         self.ipgrabber_blocklist_frame.setStyleSheet(u"")
         self.ipgrabber_blocklist_frame.setFrameShape(QFrame.NoFrame)
@@ -253,7 +253,7 @@ class Ui_MainWindow(object):
         self.ipgrabber_blocklist_layout.setContentsMargins(0, 0, 0, 0)
         self.no_facebook_frame = QFrame(self.apply_blocklist)
         self.no_facebook_frame.setObjectName(u"no_facebook_frame")
-        self.no_facebook_frame.setGeometry(QRect(460, 400, 251, 91))
+        self.no_facebook_frame.setGeometry(QRect(20, 350, 251, 91))
         self.no_facebook_frame.setCursor(QCursor(Qt.PointingHandCursor))
         self.no_facebook_frame.setFrameShape(QFrame.NoFrame)
         self.no_facebook_frame.setFrameShadow(QFrame.Raised)
@@ -262,6 +262,105 @@ class Ui_MainWindow(object):
         self.no_facebook_layout.setSpacing(0)
         self.no_facebook_layout.setObjectName(u"no_facebook_layout")
         self.no_facebook_layout.setContentsMargins(0, 0, 0, 0)
+        self.tilte_label_2 = QLabel(self.apply_blocklist)
+        self.tilte_label_2.setObjectName(u"tilte_label_2")
+        self.tilte_label_2.setGeometry(QRect(0, 30, 801, 51))
+        self.tilte_label_2.setFont(font)
+        self.tilte_label_2.setCursor(QCursor(Qt.ArrowCursor))
+        self.tilte_label_2.setTextFormat(Qt.AutoText)
+        self.tilte_label_2.setScaledContents(False)
+        self.tilte_label_2.setAlignment(Qt.AlignCenter)
+        self.custom_blocklist_btn = QPushButton(self.apply_blocklist)
+        self.custom_blocklist_btn.setObjectName(u"custom_blocklist_btn")
+        self.custom_blocklist_btn.setGeometry(QRect(10, 460, 251, 71))
+        self.custom_blocklist_btn.setStyleSheet(u"QWidget{\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    background-color: rgb(204, 204, 204);\n"
+"    padding: 10px 64px 10px 64px;\n"
+"    font: 19px 'Microsoft YaHei';\n"
+"    border: transparent;\n"
+"    border-radius: 4px;\n"
+"    /* height: 40px; */\n"
+"}\n"
+"\n"
+"QPushButton:pressed:hover {\n"
+"    background-color: rgb(153, 153, 153);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(230, 230, 230);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: rgb(204, 204, 204);\n"
+"    color: rgb(122, 122, 122);\n"
+"}")
+        self.apply_blocklist_btn = QPushButton(self.apply_blocklist)
+        self.apply_blocklist_btn.setObjectName(u"apply_blocklist_btn")
+        self.apply_blocklist_btn.setGeometry(QRect(520, 460, 261, 71))
+        self.apply_blocklist_btn.setStyleSheet(u"QWidget{\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    background-color: rgb(204, 204, 204);\n"
+"    padding: 10px 64px 10px 64px;\n"
+"    font: 19px 'Microsoft YaHei';\n"
+"    border: transparent;\n"
+"    border-radius: 4px;\n"
+"    /* height: 40px; */\n"
+"}\n"
+"\n"
+"QPushButton:pressed:hover {\n"
+"    background-color: rgb(153, 153, 153);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(230, 230, 230);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: rgb(204, 204, 204);\n"
+"    color: rgb(122, 122, 122);\n"
+"}")
+        self.oisd_full_label = QLabel(self.apply_blocklist)
+        self.oisd_full_label.setObjectName(u"oisd_full_label")
+        self.oisd_full_label.setGeometry(QRect(268, 79, 531, 91))
+        font1 = QFont()
+        font1.setFamilies([u"Microsoft YaHei"])
+        font1.setPointSize(12)
+        self.oisd_full_label.setFont(font1)
+        self.oisd_full_label.setTextFormat(Qt.RichText)
+        self.oisd_full_label.setScaledContents(False)
+        self.oisd_full_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.oisd_full_label.setWordWrap(True)
+        self.oisd_lightweight_label_2 = QLabel(self.apply_blocklist)
+        self.oisd_lightweight_label_2.setObjectName(u"oisd_lightweight_label_2")
+        self.oisd_lightweight_label_2.setGeometry(QRect(270, 170, 531, 91))
+        self.oisd_lightweight_label_2.setFont(font1)
+        self.oisd_lightweight_label_2.setTextFormat(Qt.RichText)
+        self.oisd_lightweight_label_2.setScaledContents(False)
+        self.oisd_lightweight_label_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.oisd_lightweight_label_2.setWordWrap(True)
+        self.ipgrabber_label = QLabel(self.apply_blocklist)
+        self.ipgrabber_label.setObjectName(u"ipgrabber_label")
+        self.ipgrabber_label.setGeometry(QRect(270, 260, 531, 91))
+        self.ipgrabber_label.setFont(font1)
+        self.ipgrabber_label.setTextFormat(Qt.RichText)
+        self.ipgrabber_label.setScaledContents(False)
+        self.ipgrabber_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.ipgrabber_label.setWordWrap(True)
+        self.no_facebook_label = QLabel(self.apply_blocklist)
+        self.no_facebook_label.setObjectName(u"no_facebook_label")
+        self.no_facebook_label.setGeometry(QRect(270, 350, 531, 91))
+        self.no_facebook_label.setFont(font1)
+        self.no_facebook_label.setTextFormat(Qt.RichText)
+        self.no_facebook_label.setScaledContents(False)
+        self.no_facebook_label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.no_facebook_label.setWordWrap(True)
         self.stackedWidget.addWidget(self.apply_blocklist)
         self.cleanup_blocklists = QWidget()
         self.cleanup_blocklists.setObjectName(u"cleanup_blocklists")
@@ -298,5 +397,12 @@ class Ui_MainWindow(object):
         self.whitelist_btn.setText(QCoreApplication.translate("MainWindow", u"Whitelist", None))
         self.blacklist_btn.setText(QCoreApplication.translate("MainWindow", u"Blacklist", None))
         self.cleanup_btn.setText(QCoreApplication.translate("MainWindow", u"Cleanup", None))
+        self.tilte_label_2.setText(QCoreApplication.translate("MainWindow", u"Apply Blocklist", None))
+        self.custom_blocklist_btn.setText(QCoreApplication.translate("MainWindow", u"Custom URL", None))
+        self.apply_blocklist_btn.setText(QCoreApplication.translate("MainWindow", u"Apply", None))
+        self.oisd_full_label.setText(QCoreApplication.translate("MainWindow", u"Main Blocklist. Recommended for higher spec devices. Note this can have a severe effect on startup time for weaker devices.", None))
+        self.oisd_lightweight_label_2.setText(QCoreApplication.translate("MainWindow", u"Main Blocklist more friendly to low end devices. Recommended for laptops and weaker spec devices.", None))
+        self.ipgrabber_label.setText(QCoreApplication.translate("MainWindow", u"Extra Blocklist. Blocks Ip Grabbers as they name suggests.", None))
+        self.no_facebook_label.setText(QCoreApplication.translate("MainWindow", u"Blocks Facebook and Facebook related trackers entirely (no access).", None))
     # retranslateUi
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -302,8 +302,8 @@ QPushButton:disabled {
      <widget class="QFrame" name="oisd_full_frame">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>360</y>
+        <x>20</x>
+        <y>80</y>
         <width>251</width>
         <height>91</height>
        </rect>
@@ -341,8 +341,8 @@ QPushButton:disabled {
      <widget class="QFrame" name="oisd_lightweight_frame">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>50</y>
+        <x>20</x>
+        <y>170</y>
         <width>251</width>
         <height>91</height>
        </rect>
@@ -380,8 +380,8 @@ QPushButton:disabled {
      <widget class="QFrame" name="ipgrabber_blocklist_frame">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>200</y>
+        <x>20</x>
+        <y>260</y>
         <width>251</width>
         <height>91</height>
        </rect>
@@ -422,8 +422,8 @@ QPushButton:disabled {
      <widget class="QFrame" name="no_facebook_frame">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>400</y>
+        <x>20</x>
+        <y>350</y>
         <width>251</width>
         <height>91</height>
        </rect>
@@ -457,6 +457,242 @@ QPushButton:disabled {
         <number>0</number>
        </property>
       </layout>
+     </widget>
+     <widget class="QLabel" name="tilte_label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>801</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Verdana</family>
+        <pointsize>24</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>Apply Blocklist</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="custom_blocklist_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>460</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Custom URL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="apply_blocklist_btn">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>460</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+    background-color: white;
+}
+
+QPushButton {
+    background-color: rgb(204, 204, 204);
+    padding: 10px 64px 10px 64px;
+    font: 19px 'Microsoft YaHei';
+    border: transparent;
+    border-radius: 4px;
+    /* height: 40px; */
+}
+
+QPushButton:pressed:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+QPushButton:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+QPushButton:disabled {
+    background-color: rgb(204, 204, 204);
+    color: rgb(122, 122, 122);
+}</string>
+      </property>
+      <property name="text">
+       <string>Apply</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="oisd_full_label">
+      <property name="geometry">
+       <rect>
+        <x>268</x>
+        <y>79</y>
+        <width>531</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Main Blocklist. Recommended for higher spec devices. Note this can have a severe effect on startup time for weaker devices.</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="oisd_lightweight_label_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>170</y>
+        <width>531</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Main Blocklist more friendly to low end devices. Recommended for laptops and weaker spec devices.</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ipgrabber_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>260</y>
+        <width>531</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Extra Blocklist. Blocks Ip Grabbers as they name suggests.</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="no_facebook_label">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>350</y>
+        <width>531</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Blocks Facebook and Facebook related trackers entirely (no access).</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="cleanup_blocklists"/>
