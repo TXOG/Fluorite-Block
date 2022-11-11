@@ -23,19 +23,31 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPushButton,
-    QSizePolicy, QStatusBar, QWidget, QMessageBox, QComboBox)
+QSizePolicy, QStatusBar, QWidget, QMessageBox, QComboBox, QCheckBox)
 
-
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+from PySide6 import QtCore, QtWidgets, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
     _fromUtf8 = lambda s: s
 
+from PySide6 import QtWidgets
 
+from PySide6.QtCore import *
+
+from PySide6.QtGui import *
+
+from PySide6.QtSvgWidgets import *
+
+from PySide6.QtWidgets import *
 #some variables
 # - Ignore this, its used for testing the program without admin perms every time
 base_path = os.getcwd()
 host_path = base_path + r"\etc\hosts.txt"
+
+
 
 # try:
 #     is_admin = os.getuid() == 0
@@ -354,13 +366,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.cleanup_btn.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.cleanup_blocklists))
         self.undo_btn.clicked.connect(lambda: undo_changes_dialog())
 
+        self.oisd_full = QCheckBox("Button1")
+        self.oisd_full_layout.addWidget(self.oisd_full, Qt.AlignCenter, Qt.AlignCenter)
+
+        self.oisd_lightweight = QCheckBox("Button1")
+        self.oisd_lightweight_layout.addWidget(self.oisd_lightweight, Qt.AlignCenter, Qt.AlignCenter)
+
+        self.ipgrabber_blocklist = QCheckBox("Button1")
+        self.ipgrabber_blocklist_layout.addWidget(self.ipgrabber_blocklist, Qt.AlignCenter, Qt.AlignCenter)
+
+        self.no_facebook = QCheckBox("Button1")
+        self.no_facebook_layout.addWidget(self.no_facebook, Qt.AlignCenter, Qt.AlignCenter)
+
         def undo_changes_dialog():
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Warning)
             msg.setText("UNDO ALL CHANGES")
             msg.setInformativeText("Are you sure you want to undo all changes?")
-            msg.setWindowTitle("UNDO ALL CHANGES")
-            msg.setDetailedText("Sets hosts back to normal")
+            msg.setWindowTitle("Sysblock")
             msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
             msg.buttonClicked.connect(msgbtn)
             msg.exec()

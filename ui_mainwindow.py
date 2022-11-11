@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainwindowHLBDru.ui'
+## Form generated from reading UI file 'mainwindowacmzVH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenuBar,
-    QPushButton, QSizePolicy, QStackedWidget, QStatusBar,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
+    QStackedWidget, QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -217,6 +217,51 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.custom_redirects)
         self.apply_blocklist = QWidget()
         self.apply_blocklist.setObjectName(u"apply_blocklist")
+        self.oisd_full_frame = QFrame(self.apply_blocklist)
+        self.oisd_full_frame.setObjectName(u"oisd_full_frame")
+        self.oisd_full_frame.setGeometry(QRect(100, 360, 251, 91))
+        self.oisd_full_frame.setCursor(QCursor(Qt.PointingHandCursor))
+        self.oisd_full_frame.setFrameShape(QFrame.NoFrame)
+        self.oisd_full_frame.setFrameShadow(QFrame.Raised)
+        self.oisd_full_frame.setLineWidth(0)
+        self.oisd_full_layout = QHBoxLayout(self.oisd_full_frame)
+        self.oisd_full_layout.setSpacing(0)
+        self.oisd_full_layout.setObjectName(u"oisd_full_layout")
+        self.oisd_full_layout.setContentsMargins(0, 0, 0, 0)
+        self.oisd_lightweight_frame = QFrame(self.apply_blocklist)
+        self.oisd_lightweight_frame.setObjectName(u"oisd_lightweight_frame")
+        self.oisd_lightweight_frame.setGeometry(QRect(100, 50, 251, 91))
+        self.oisd_lightweight_frame.setCursor(QCursor(Qt.PointingHandCursor))
+        self.oisd_lightweight_frame.setFrameShape(QFrame.NoFrame)
+        self.oisd_lightweight_frame.setFrameShadow(QFrame.Raised)
+        self.oisd_lightweight_frame.setLineWidth(0)
+        self.oisd_lightweight_layout = QHBoxLayout(self.oisd_lightweight_frame)
+        self.oisd_lightweight_layout.setSpacing(0)
+        self.oisd_lightweight_layout.setObjectName(u"oisd_lightweight_layout")
+        self.oisd_lightweight_layout.setContentsMargins(0, 0, 0, 0)
+        self.ipgrabber_blocklist_frame = QFrame(self.apply_blocklist)
+        self.ipgrabber_blocklist_frame.setObjectName(u"ipgrabber_blocklist_frame")
+        self.ipgrabber_blocklist_frame.setGeometry(QRect(420, 200, 251, 91))
+        self.ipgrabber_blocklist_frame.setCursor(QCursor(Qt.PointingHandCursor))
+        self.ipgrabber_blocklist_frame.setStyleSheet(u"")
+        self.ipgrabber_blocklist_frame.setFrameShape(QFrame.NoFrame)
+        self.ipgrabber_blocklist_frame.setFrameShadow(QFrame.Raised)
+        self.ipgrabber_blocklist_frame.setLineWidth(0)
+        self.ipgrabber_blocklist_layout = QHBoxLayout(self.ipgrabber_blocklist_frame)
+        self.ipgrabber_blocklist_layout.setSpacing(0)
+        self.ipgrabber_blocklist_layout.setObjectName(u"ipgrabber_blocklist_layout")
+        self.ipgrabber_blocklist_layout.setContentsMargins(0, 0, 0, 0)
+        self.no_facebook_frame = QFrame(self.apply_blocklist)
+        self.no_facebook_frame.setObjectName(u"no_facebook_frame")
+        self.no_facebook_frame.setGeometry(QRect(460, 400, 251, 91))
+        self.no_facebook_frame.setCursor(QCursor(Qt.PointingHandCursor))
+        self.no_facebook_frame.setFrameShape(QFrame.NoFrame)
+        self.no_facebook_frame.setFrameShadow(QFrame.Raised)
+        self.no_facebook_frame.setLineWidth(0)
+        self.no_facebook_layout = QHBoxLayout(self.no_facebook_frame)
+        self.no_facebook_layout.setSpacing(0)
+        self.no_facebook_layout.setObjectName(u"no_facebook_layout")
+        self.no_facebook_layout.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget.addWidget(self.apply_blocklist)
         self.cleanup_blocklists = QWidget()
         self.cleanup_blocklists.setObjectName(u"cleanup_blocklists")
